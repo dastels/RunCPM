@@ -16,6 +16,7 @@
 //#define CONSOLELOG	// Writes debug information to console instead of file
 //#define LOGONLY 22	// If defined will log only this BDOS (or BIOS) function
 #define LogName "RunCPM.log"
+//#define iDEBUG		// Instruction debugger (PC only, for development)
 
 /* RunCPM version for the greeting header */
 #define VERSION	"3.7"
@@ -173,7 +174,6 @@ extern "C"
 	extern uint8* _RamSysAddr(uint16 address);
 	extern void _RamWrite(uint16 address, uint8 value);
 #endif
-	extern void _RamFill(uint16 address, int size, uint8 value);
 
 	extern void _Bdos(void);
 	extern void _Bios(void);
